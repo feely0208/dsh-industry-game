@@ -1,0 +1,14 @@
+{
+  "id": "GAME-DRAW-PROB",
+  "title": "有抽卡/开箱玩法但全文无「概率公示」",
+  "severity": "medium",
+  "source": "文化部《关于规范网络游戏运营加强事中事后监管工作的通知》（2016）—— 随机抽取须公示抽取概率",
+  "advice": "在抽卡/开箱界面公示各稀有度概率（精确到小数），概率改动需提前公告。",
+  "check": {
+    "type": "files-lack",
+    "pattern": "概率公示|抽取概率|掉落概率|probabilit|drop[-_ ]?rate",
+    "flags": "gi",
+    "paths": ["**/*.md", "**/*.txt", "**/*.json"],
+    "when": "(?:抽奖|抽卡|开箱|gacha|单抽|十连)"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "@deepwhale-cn/dsh-industry-game",
+  "version": "0.1.0",
+  "description": "游戏多出来的那几项：防沉迷时段、实名认证、适龄提示、版号展示、抽奖概率公示",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin",
+    "skill",
+    "游戏",
+    "防沉迷",
+    "适龄",
+    "版号"
+  ],
+  "files": [
+    "lib",
+    "skill",
+    "bin",
+    "rules",
+    "cordis.patch.yml",
+    "tests/fixtures",
+    "README.md"
+  ],
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-industry-game": "bin/cli.mjs"
+  },
+  "engines": {
+    "dsh": ">=0.1.0-rc.6 <0.3.0",
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@deepwhale-cn/dsh-guard-core": "^0.10.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feely0208/dsh-industry-game.git"
+  },
+  "homepage": "https://deepwhale.org.cn/plugins.html",
+  "bugs": {
+    "url": "https://github.com/feely0208/dsh-industry-game/issues"
+  }
+}
